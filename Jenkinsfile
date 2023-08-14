@@ -9,6 +9,7 @@ pipeline {
 
     stage('build') {
       steps {
+        sh 'echo Shruthi'
         sh 'mvn clean install'
       }
     }
