@@ -10,7 +10,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'echo Shruthi'
-        sh 'mvn clean install'
+        sh '${MAVEN_HOME}/bin/mvn clean install'
       }
     }
 
