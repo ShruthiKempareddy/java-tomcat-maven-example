@@ -9,7 +9,6 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'echo Shruthi'
         sh '${M2_HOME}/bin/mvn clean install'
       }
     }
