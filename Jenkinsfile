@@ -9,8 +9,8 @@ pipeline {
 
     stage('build') {
       steps {
-        withMaven {
-          sh "mvn clean verify"
+        withMaven(globalMavenSettingsConfig: '', jdk: '', maven: 'Maven', mavenSettingsConfig: '', traceability: true) {
+          sh 'mvn clean install'
         }
       }
     }
