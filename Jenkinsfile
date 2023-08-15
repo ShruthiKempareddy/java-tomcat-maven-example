@@ -9,7 +9,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh '${M2_HOME}/bin/mvn clean install'
+        sh 'mvn clean install'
       }
     }
 
