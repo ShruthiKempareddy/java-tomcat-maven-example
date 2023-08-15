@@ -9,7 +9,9 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'mvn clean install'
+        withMaven {
+          sh "mvn clean verify"
+        }
       }
     }
 
