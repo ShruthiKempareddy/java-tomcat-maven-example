@@ -15,7 +15,7 @@ pipeline {
       }
     }
 
-    stage('build') {
+    stage('deploy') {
       steps {
         rtServer (
                     id: "Artifactory", 
