@@ -10,7 +10,7 @@ pipeline {
     stage('build') {
       steps {
         withMaven(globalMavenSettingsConfig: '', jdk: '', maven: 'Maven', mavenSettingsConfig: '', traceability: true) {
-          sh 'mvn clean install'
+          bat 'mvn clean install'
         }
       }
     }
