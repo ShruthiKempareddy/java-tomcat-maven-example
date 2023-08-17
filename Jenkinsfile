@@ -15,5 +15,16 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        rtServer (
+                    id: "Artifactory", 
+                    url: "http://localhost:8082/artifactory",
+                    credentialsId: "admin.jfrog"
+                )
+        }
+      }
+    }
+
   }
 }
